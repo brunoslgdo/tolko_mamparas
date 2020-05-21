@@ -1,0 +1,41 @@
+.card {
+    color: var(--text);
+    background-color: var(--text-alt);
+    box-shadow: 0 0 0.2rem var(--text);
+    border-radius: var(--sm);
+    margin-bottom: var(--md);
+    padding: var(--xl) var(--md);
+    max-width: 40rem;
+
+    @media only screen and (min-width: 568px) {
+        padding: var(--xl);
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__content {
+        margin-bottom: var(--sm);
+        text-align: center;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__image {
+        max-width: 100%;
+    }
+
+    &__title {
+        font-family: 'tolko-bold';
+        font-size: var(--title); 
+    }
+
+    &__description {
+        font-family: 'tolko-light';
+        font-size: var(--caption);
+    }
+
+}

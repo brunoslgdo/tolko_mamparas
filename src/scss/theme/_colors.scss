@@ -1,0 +1,20 @@
+$colors: (
+    // first: #ff0b53,
+    // first: #f00000,
+    first: #d31027,
+    text: #3d3d3d,
+    // text: #1e1e1e,
+    text-alt: #ffffff,
+);
+
+:root {
+    @each $key, $val in $colors {
+        --#{$key}: #{$val};
+    } 
+}
+
+@each $key, $val in $colors {
+    .#{$key} {
+        color: #{$val};
+    }
+}

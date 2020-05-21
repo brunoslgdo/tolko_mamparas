@@ -1,0 +1,47 @@
+$font-size: (
+    // display-one: 6.4rem,
+    // display-two: 3.8rem,
+    // title: 3.2rem,
+    // subtitle: 2.4rem,
+    // caption: 2rem,
+    // body: 1.6rem,
+    // medium: 1.4rem,
+    display-one: 5.4rem,
+    display-two: 3.2rem,
+    title: 3.2rem,
+    // subtitle: 2.4rem,
+    caption: 2rem,
+    body: 1.6rem,
+    // medium: 1.4rem,
+);
+
+$font-family: (
+    bold: 'tolko-bold',
+    medium: 'tolko-medium',
+    regular: 'tolko-regular',
+    light: 'tolko-light',
+);
+
+:root {
+    
+    @each $key, $val in $font-size {
+        --#{$key}: #{$val};
+    }
+    
+    @each $key, $val in $font-family {
+        --#{$key}: "#{$val}";
+    }
+
+}
+
+@each $key, $val in $font-size {
+    .#{$key} {
+        font-size: #{$val};
+    }
+}
+
+@each $key, $val in $font-family {
+    .#{$key} {
+        font-family: "#{$val}";
+    }
+}

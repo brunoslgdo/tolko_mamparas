@@ -1,0 +1,26 @@
+footer.__row.footer
+    .__column
+        p.footer__caption Déjate envolver por TOLKO
+    .__column.footer__wrap
+        .footer__item
+            .footer__box.footer__logo
+                img(src="img/logo-tolko.svg", alt="tolko") 
+                h1 somos únicos
+        .footer__item
+            .footer__box
+                h2 Escríbenos
+                a(href="#") contacto@tolkogroup.com
+        .footer__item
+            .footer__box
+                h2 Visítanos
+                p Cerrada de Tecamachalco #39,<br>Reforma Soc,<br>C. P. 11650,<br>Miguel Hidalgo,<br>CDMX
+        .footer__item
+            .footer__box
+                h2 Llámanos
+                a(href="#") 55 6726 0645
+        .footer__item
+            .footer__box
+                h2 Síguenos
+                ul.header__socials
+                    each social in SOCIALS
+                        li: a(href=`${social.url}`): img(src=`${imagePath}${social.icon}`, alt=`${social.alt}`)

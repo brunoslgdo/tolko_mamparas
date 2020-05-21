@@ -1,0 +1,5 @@
+each card in CARDS
+    .card
+        img(src=`${imagePath}${card.image}`, alt=`${card.image}`, class="card__content card__image")
+        h1.card__content.card__title= `${card.title}`
+        p.card__content.card__description= `${card.description}`

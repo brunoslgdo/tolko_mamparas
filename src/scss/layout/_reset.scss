@@ -1,0 +1,13 @@
+html {
+    // background-color: #000000;
+    box-sizing: border-box;
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    font-family: 'tolko-light';
+    margin: 0;
+    padding: 0;
+}
