@@ -1,0 +1,12 @@
+.socials {
+    list-style: none;
+
+    li {
+        display: inline-block;
+        margin-right: var(--sm);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
