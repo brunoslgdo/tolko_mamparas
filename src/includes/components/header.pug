@@ -3,4 +3,4 @@
         img(src="img/logo-tolko.svg", class="header__logo", alt="tolko")
         ul.header__socials
             each social in SOCIALS
-                li: a(href=`${social.url}`): img(src=`${imagePath}${social.icon}`, alt=`${social.alt}`)
+                li: a(href=`${social.url}`, target="_blank"): img(src=`${imagePath}${social.icon}`, alt=`${social.alt}`)
