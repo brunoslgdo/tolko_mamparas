@@ -1,6 +1,6 @@
 //- form(method="post", action="scripts/send-form.php", class="form")
 form(method="post", class="form")
-    fieldset.form__fieldset.fieldset__informacion-personal
+    fieldset.form__fieldset
         legend.form__legend Información personal (requerida)
         label(for="firstname", class="form__label")
             <span>Nombre</span>
@@ -15,24 +15,24 @@ form(method="post", class="form")
             input(type="tel", name="telphone", placeholder="Escribe tu teléfono", required, class="form__input")
     fieldset.form__fieldset
         legend.form__legend Mampara de interés
-        label(for="bulkhead", class="form__label")
+        label(for="bulkhead", class="form__label-radio")
             input(type="radio", name="bulkheader", class="form__radio")
             | Escritorio
-        label(for="bulkhead", class="form__label")
+        label(for="bulkhead", class="form__label-radio")
             input(type="radio", name="bulkheader", class="form__radio")
             | Piso
-        label(for="bulkhead", class="form__label")
+        label(for="bulkhead", class="form__label-radio")
             input(type="radio", name="bulkheader", class="form__radio")
             | Ambas
     fieldset.form__fieldset
         legend.form__legend Tipo de negocio
-        label(for="business", class="form__label")
+        label(for="business", class="form__label-radio")
             input(type="radio", name="business", class="form__radio")
             | Oficina
-        label(for="business", class="form__label")
+        label(for="business", class="form__label-radio")
             input(type="radio", name="business", class="form__radio")
             | Restaurante
-        label(for="business", class="form__label")
+        label(for="business", class="form__label-radio")
             input(type="radio", name="business", class="form__radio")
             | Otro
     fieldset.form__fieldset
