@@ -1,18 +1,11 @@
 $font-size: (
-    // display-one: 6.4rem,
-    // display-two: 3.8rem,
-    // title: 3.2rem,
-    // subtitle: 2.4rem,
-    // caption: 2rem,
-    // body: 1.6rem,
-    // medium: 1.4rem,
     display-one: 5.4rem,
     display-two: 3.2rem,
     title: 3.2rem,
-    // subtitle: 2.4rem,
     caption: 2rem,
     body: 1.6rem,
     small: 1.4rem,
+    smaller: 1.2rem,
 );
 
 $font-family: (
@@ -20,6 +13,7 @@ $font-family: (
     medium: 'tolko-medium',
     regular: 'tolko-regular',
     light: 'tolko-light',
+    extra-light: 'tolko-extra-light',
 );
 
 :root {
