@@ -6,17 +6,8 @@ footer.__row {
 .footer {
     background-color: #1e1e1e;
     
-    &, a {
+    & * {
         color: var(--text-alt);
-    }
-
-    h2, p, a {
-        font-size: 1.3rem;
-    }
-
-    h2 {
-        @extend .medium;
-        margin-bottom: var(--xs);
     }
 
     a {
@@ -46,6 +37,13 @@ footer.__row {
             grid-template-columns: repeat(4, auto);
         }
 
+    }
+
+    &__socials {
+        
+        .footer__title {
+            margin-bottom: var(--xs);
+        }
     }
 
     &__item {
@@ -113,13 +111,28 @@ footer.__row {
 
     }
 
+    &__heading {
+        @extend .light;
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+        margin-bottom: var(--md);
 
+        &::before {
+            content: '';
+            display: block;
+            background-color: var(--text-alt);
+            margin-right: var(--xs);
+            width: var(--sm);
+            height: 0.1rem;
+        }
+    }
 
     &__logo {
         display: flex;
         align-items: center;
         
-        h1 {
+        .footer__slogan {
             @extend .bold;
             font-size: var(--md);
             text-transform: uppercase;
@@ -131,23 +144,13 @@ footer.__row {
         }
     }
 
-    &__caption {
-        @extend .bold;
-        display: flex;
-        align-items: center;
-        font-size: 1.3rem;
+    &__title {
+        font-size: var(--smaller);
         font-weight: normal;
-        margin-bottom: var(--md);
-
-        &::before {
-            content: '';
-            display: block;
-            background-color: var(--text-alt);
-            margin-right: var(--xs);
-            width: var(--sm);
-            height: 0.1rem;
-        }
-
     }
 
+    &__datos {
+        font-size: var(--small);
+        @extend .bold;
+    }
 }
