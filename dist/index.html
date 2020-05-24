@@ -48,15 +48,52 @@
         </div>
         <div class="main__wrap main__form">
           <p class="text title medium">Solicita tu cotización o más información:</p>
-          <form class="form" method="post" action="scripts/send-form.php">
-            <input class="form__input" type="text" name="firstname" placeholder="Nombre *" required="required"/>
-            <input class="form__input" type="text" name="lastname" placeholder="Apellido *" required="required"/>
-            <input class="form__input" type="email" name="email" placeholder="E-mail *" required="required"/>
-            <input class="form__input" type="tel" name="telphone" placeholder="Teléfono *" required="required"/>
-            <input class="form__input" type="text" name="bulkhead" placeholder="Mampara de interés"/>
-            <input class="form__input" type="text" name="business" placeholder="Tipo de negocio"/>
-            <textarea class="form__input form__textarea" placeholder="Comentarios" name="comments"></textarea>
-            <input class="form__input form__button" type="submit" value="Enviar"/>
+          <form class="form" method="post">
+            <fieldset class="form__fieldset fieldset__informacion-personal">
+              <legend class="form__legend">Información personal (requerida)</legend>
+              <label class="form__label" for="firstname"><span>Nombre</span>
+                <input class="form__input" type="text" name="firstname" placeholder="Escribe tu(s) nombre(s)" required="required"/>
+              </label>
+              <label class="form__label" for="lastname"><span>Apellido</span>
+                <input class="form__input" type="text" name="lastname" placeholder="Escribe tu(s) Apellido(s)" required="required"/>
+              </label>
+              <label class="form__label" for="email">
+                 <span>E-mail</span>
+                <input class="form__input" type="email" name="email" placeholder="Escribe tu e-mail" required="required"/>
+              </label>
+              <label class="form__label" for="telphone"><span>Teléfono</span>
+                <input class="form__input" type="tel" name="telphone" placeholder="Escribe tu teléfono" required="required"/>
+              </label>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Mampara de interés</legend>
+              <label class="form__label" for="bulkhead">
+                <input class="form__radio" type="radio" name="bulkheader"/>Escritorio
+              </label>
+              <label class="form__label" for="bulkhead">
+                <input class="form__radio" type="radio" name="bulkheader"/>Piso
+              </label>
+              <label class="form__label" for="bulkhead">
+                <input class="form__radio" type="radio" name="bulkheader"/>Ambas
+              </label>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Tipo de negocio</legend>
+              <label class="form__label" for="business">
+                <input class="form__radio" type="radio" name="business"/>Oficina
+              </label>
+              <label class="form__label" for="business">
+                <input class="form__radio" type="radio" name="business"/>Restaurante
+              </label>
+              <label class="form__label" for="business">
+                <input class="form__radio" type="radio" name="business"/>Otro
+              </label>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Comentarios</legend>
+              <textarea class="form__input form__textarea" name="comments" placeholder="Escribe tus comentarios"></textarea>
+            </fieldset>
+            <input class="form__field form__input form__button" type="submit" value="Enviar"/>
           </form>
         </div>
       </div>
