@@ -16,7 +16,6 @@
 
     &__fieldset {
         display: grid;
-        gap: var(--sm);
         border: 0.1rem solid rgba(0, 0, 0, 0.2);
         border-radius: var(--sm);
         padding: var(--sm);
@@ -31,23 +30,6 @@
         }
     }
 
-    &__informacion-personal {
-        // display: grid;
-        // grid-template-columns: 1fr;
-        // grid-template-rows: auto;
-        // gap: var(--sm);
-
-        // @media only screen and (min-width: 568px) {
-        //     grid-template-columns: repeat(2, 50%);
-
-        //     .form__label:nth-child(2),
-        //     .form__label:nth-child(3) {
-        //         grid-column-start: 1;
-        //         grid-column-end: 3;
-        //     }
-        // }
-    }
-
     &__legend {
         font-size: var(--small);
         margin-left: -1rem;
@@ -57,6 +39,11 @@
 
     &__label {
         display: block;
+        margin-bottom: var(--sm);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
         
         & > span {
             display: block;
@@ -90,9 +77,16 @@
         }
     }
 
-    &__radio {
-        border: 0.1rem solid var(--text);
+    &__label-radio {
+        display: block;
         margin-bottom: var(--xs);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__radio {
         margin-right: var(--xs);
     }
 
