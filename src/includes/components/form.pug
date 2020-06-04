@@ -1,5 +1,5 @@
-//- form(method="post", action="scripts/send-form.php", class="form")
-form(method="post", class="form")
+//- form(method="post", class="form")
+form(method="post", action="php/send-form.php", class="form")
     fieldset.form__fieldset
         legend.form__legend Información personal (requerida)
         label(for="firstname", class="form__label")
@@ -16,24 +16,24 @@ form(method="post", class="form")
     fieldset.form__fieldset
         legend.form__legend Mampara de interés
         label(for="bulkhead", class="form__label-radio")
-            input(type="radio", name="bulkheader", class="form__radio")
+            input(type="radio", name="bulkhead", value="escritorio", class="form__radio")
             | Escritorio
         label(for="bulkhead", class="form__label-radio")
-            input(type="radio", name="bulkheader", class="form__radio")
+            input(type="radio", name="bulkhead", value="piso", class="form__radio")
             | Piso
         label(for="bulkhead", class="form__label-radio")
-            input(type="radio", name="bulkheader", class="form__radio")
+            input(type="radio", name="bulkhead", value="ambas", class="form__radio")
             | Ambas
     fieldset.form__fieldset
         legend.form__legend Tipo de negocio
         label(for="business", class="form__label-radio")
-            input(type="radio", name="business", class="form__radio")
+            input(type="radio", name="business", value="oficina", class="form__radio")
             | Oficina
         label(for="business", class="form__label-radio")
-            input(type="radio", name="business", class="form__radio")
+            input(type="radio", name="business", value="restaurante", class="form__radio")
             | Restaurante
         label(for="business", class="form__label-radio")
-            input(type="radio", name="business", class="form__radio")
+            input(type="radio", name="business", value="otro", class="form__radio")
             | Otro
     fieldset.form__fieldset
         legend.form__legend Comentarios

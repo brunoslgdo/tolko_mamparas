@@ -1,28 +1,10 @@
 .hero-background {
-    background: #ef473a;  /* fallback for old browsers */
-    // background: -webkit-linear-gradient(to bottom, #EA384D, #D31027);  /* Chrome 10-25, Safari 5.1-6 */
-    // background: linear-gradient(to bottom, #EA384D, #D31027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-image: url('../img/mampara-oficina-2.jpg');
+    background: #ef473a;
+    background-image: url('../img/mampara-oficina-movil.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-blend-mode: multiply;
-    // background-blend-mode: screen;
-    // background-blend-mode: overlay;
-    // background-blend-mode: darken;
-    // background-blend-mode: lighten;
-    // background-blend-mode: difference;
-    // background-blend-mode: exclusion;
-    // background-blend-mode: hue;
-    // background-blend-mode: saturation;
-    // background-blend-mode: color;
-    // background-blend-mode: luminosity;
-    // background-blend-mode: unset;
-    // background-blend-mode: color-dodge;
-    // background-blend-mode: color-burn;
-    // background-blend-mode: hard-light;
-    // background-blend-mode: soft-light;
-    // min-height: 64rem;
     position: absolute;
     top: 0;
     right: 0;
@@ -31,13 +13,17 @@
     transform: skewY(-2deg);
     transform-origin: top left;
     z-index: -1;
-
+    
     @media only screen and (min-width: 568px) {
+        background-image: url('../img/mampara-oficina-tablet.jpg');
         min-height: 80rem;
     }
     
-    @media only screen and (min-width: 568px) {
+    @media only screen and (min-width: 768px) {
         min-height: 64rem;
     }
-
+    
+    @media only screen and (min-width: 1024px) {
+        background-image: url('../img/mampara-oficina-desktop.jpg');
+    }
 }

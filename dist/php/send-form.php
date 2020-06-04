@@ -1,7 +1,7 @@
 <?php
 
-    require("class.phpmailer.php");
-    require("class.smtp.php");
+    // require("class.phpmailer.php");
+    // require("class.smtp.php");
 
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
@@ -15,11 +15,11 @@
     $from = "bsalgado@tolkogroup.com";
     $subject = "INFO MAMPARAS";
     
-    $body  = "Nombre:"." ".$firstname." ".$lastname."\r\n"; 
-    $body .= "E-mail:"." ".$email."\r\n";
-    $body .= "Teléfono:"." ".$telphone."\r\n";
-    $body .= "Mampara de interés:"." ".$bulkhead."\r\n";
-    $body .= "Tipo de negocio:"." ".$business."\r\n";
+    $body  = "Nombre:"." ".$firstname." ".$lastname."<br>"; 
+    $body .= "E-mail:"." ".$email."<br>";
+    $body .= "Teléfono:"." ".$telphone."<br>";
+    $body .= "Mampara de interés:"." ".$bulkhead."<br>";
+    $body .= "Tipo de negocio:"." ".$business."<br>";
     $body .= "Comentarios:"." ".$comments;
 
     $headers  = "MIME-Version: 1.0"."\r\n";
