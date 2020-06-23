@@ -1,9 +1,41 @@
-form(method="post", action="scripts/send-form.php", class="form",)
-    input(type="text", name="firstname", placeholder="Nombre *", required, class="form__input")
-    input(type="text", name="lastname", placeholder="Apellido *", required, class="form__input")
-    input(type="email", name="email", placeholder="E-mail *", required, class="form__input")
-    input(type="tel", name="telphone", placeholder="Teléfono *", required, class="form__input")
-    input(type="text", name="bulkhead", placeholder="Mampara de interés", class="form__input")
-    input(type="text", name="business", placeholder="Tipo de negocio", class="form__input")
-    textarea(placeholder="Comentarios", name="comments", class="form__input form__textarea")
-    input(type="submit", value="Enviar", class="form__input form__button")
+//- form(method="post", class="form")
+form(method="post", action="php/send-form.php", class="form")
+    fieldset.form__fieldset
+        legend.form__legend Información personal (requerida)
+        label(for="firstname", class="form__label")
+            <span>Nombre</span>
+            input(type="text", name="firstname", placeholder="Escribe tu(s) nombre(s)", required, class="form__input")
+        label(for="lastname", class="form__label")
+            <span>Apellido</span>
+            input(type="text", name="lastname", placeholder="Escribe tu(s) Apellido(s)", required, class="form__input")
+        label(for="email", class="form__label") 
+            <span>E-mail</span>
+            input(type="email", name="email", placeholder="Escribe tu e-mail", required, class="form__input")
+        label(for="telphone", class="form__label") <span>Teléfono</span>
+            input(type="tel", name="telphone", placeholder="Escribe tu teléfono", required, class="form__input")
+    fieldset.form__fieldset
+        legend.form__legend Mampara de interés
+        label(for="bulkhead", class="form__label-radio")
+            input(type="radio", name="bulkhead", value="escritorio", class="form__radio")
+            | Escritorio
+        label(for="bulkhead", class="form__label-radio")
+            input(type="radio", name="bulkhead", value="piso", class="form__radio")
+            | Piso
+        label(for="bulkhead", class="form__label-radio")
+            input(type="radio", name="bulkhead", value="ambas", class="form__radio")
+            | Ambas
+    fieldset.form__fieldset
+        legend.form__legend Tipo de negocio
+        label(for="business", class="form__label-radio")
+            input(type="radio", name="business", value="oficina", class="form__radio")
+            | Oficina
+        label(for="business", class="form__label-radio")
+            input(type="radio", name="business", value="restaurante", class="form__radio")
+            | Restaurante
+        label(for="business", class="form__label-radio")
+            input(type="radio", name="business", value="otro", class="form__radio")
+            | Otro
+    fieldset.form__fieldset
+        legend.form__legend Comentarios
+        textarea(name="comments", placeholder="Escribe tus comentarios", class="form__input form__textarea")
+    input(type="submit", value="Enviar", class="form__field form__input form__button")

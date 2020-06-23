@@ -1,0 +1,3 @@
+ul.socials
+    each social in SOCIALS
+        li: a(href=`${social.url}`, target="_blank"): img(src=`${imagePath}${social.icon}`, alt=`${social.alt}`)

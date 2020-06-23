@@ -1,23 +1,38 @@
 .card {
     color: var(--text);
     background-color: var(--text-alt);
-    box-shadow: 0 0 0.2rem var(--text);
+    box-shadow: 0 0 0.2rem rgba(0,0,0,0.6);
     border-radius: var(--sm);
-    margin-bottom: var(--md);
-    padding: var(--xl) var(--md);
-    max-width: 40rem;
-
-    @media only screen and (min-width: 568px) {
-        padding: var(--xl);
-    }
-
-    &:last-child {
-        margin-bottom: 0;
-    }
+    padding-bottom: var(--lg);
+    max-width: 32rem;
+    overflow: hidden;
 
     &__content {
-        margin-bottom: var(--sm);
+        padding-right: var(--md);
+        padding-left: var(--md);
         text-align: center;
+
+        &:first-child {
+            padding-right: 0;
+            padding-left: 0;
+            position: relative;
+            height: 24rem;
+            overflow: hidden;
+
+            .card__image {
+                object-fit: cover;
+                position: absolute;
+                right: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: transform 0.3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
 
         &:last-child {
             margin-bottom: 0;
@@ -30,7 +45,9 @@
 
     &__title {
         font-family: 'tolko-bold';
-        font-size: var(--title); 
+        font-size: var(--title);
+        margin-top: var(--md);
+        margin-bottom: var(--sm);
     }
 
     &__description {

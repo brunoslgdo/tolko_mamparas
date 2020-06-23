@@ -1,0 +1,32 @@
+$font: (
+    
+    black: ttnorms-black,
+    black-italic: ttnorms-black-italic,
+    bold: ttnorms-bold,
+    bold-italic: ttnorms-bold-italic,
+    extra-bold: ttnorms-extra-bold,
+    extra-bold-italic: ttnorms-extra-bold-italic,
+    extra-light: ttnorms-extra-light,
+    extra-light-italic: ttnorms-extra-light-italic,
+    heavy: ttnorms-heavy,
+    heavy-italic: ttnorms-heavy-italic,
+    light: ttnorms-light,
+    light-italic: ttnorms-light-italic,
+    medium: ttnorms-medium,
+    medium-italic: ttnorms-medium-italic,
+    regular: ttnorms-regular,
+    regular-italic: ttnorms-regular-italic,
+    thin: ttnorms-thin,
+    thin-italic: ttnorms-thin-italic
+
+);
+
+
+@each $font-name, $font-value in $font {
+    @font-face {
+        font-family: 'tolko-#{$font-name}';
+        src: url('#{$font-value}.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
